@@ -13,14 +13,12 @@
   <meta name="geo.region" content="US-MD" /><meta name="geo.placename" content="Gaithersburg" />
   
   <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://tramsinsurance.com" /><link rel="preconnect" href="https://paymegpt.com" />
-  <link rel="preload" as="image" href="https://tramsinsurance.com/wp-content/uploads/2025/11/10minfastservice-2.png" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5LC636N0KH"></script>
   
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"All Wheels Tag & Title Services","telephone":"(240) 669-8558","email":"info@allwheelstt.com","address":{"@type":"PostalAddress","streetAddress":"201 N Frederick Ave 2nd Floor","addressLocality":"Gaithersburg","addressRegion":"MD","postalCode":"20877","addressCountry":"US"},"url":"https://allwheelstagandtitle.com","openingHours":["Mo-Fr 09:30-18:00","Sa 10:00-15:00"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.1","reviewCount":"15"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"All Wheels Tag & Title Services","telephone":"(240) 669-8558","email":"info@allwheelstt.com","address":{"@type":"PostalAddress","streetAddress":"201 N Frederick Ave 2nd Floor","addressLocality":"Gaithersburg","addressRegion":"MD","postalCode":"20877","addressCountry":"US"},"url":"https://allwheelstagandtitle.com","openingHours":["Mo-Fr 09:30-18:00","Sa 10:00-15:00"]}</script>
   
 
 <!-- SEO Meta Tags -->
@@ -138,7 +136,7 @@
   function run(){
     if(contactId){
       var xhr=new XMLHttpRequest();
-      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=1048');
+      xhr.open('GET','https://app.calldirector.ai/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=1048');
       xhr.onload=function(){
         if(xhr.status===200){
           try{
@@ -166,7 +164,7 @@
 <script data-payment>
 (function(){
   var slug='tS4wcL87Mg';
-  var apiBase='https://paymegpt.com';
+  var apiBase='https://app.calldirector.ai';
   function findEmail(){
     var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
     for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
@@ -398,7 +396,7 @@
             <div><p class="font-semibold text-slate-900 mb-1">☎️ Phone</p><a href="tel:+12406698558" class="text-brand-burgundy font-semibold hover:underline">(240) 669-8558</a></div>
             <div><p class="font-semibold text-slate-900 mb-1">📧 Email</p><a id="aw-email-contact" href="#" class="text-brand-burgundy font-semibold hover:underline"></a></div>
             <div><p class="font-semibold text-slate-900 mb-2">🕐 Business Hours</p><ul class="space-y-1 text-slate-600 text-sm"><li><strong>Mon–Fri:</strong> 9:30 AM – 6:00 PM</li><li><strong>Saturday:</strong> 10:00 AM – 3:00 PM</li><li><strong>Sunday:</strong> Closed</li></ul></div>
-            <div class="info-strip"><span class="text-brand-burgundy font-bold">✓</span><span class="text-slate-700 text-sm">Parking available — enter from rear.</span></div>
+            <div class="info-strip"><span class="text-brand-burgundy font-bold">✓</span><span class="text-slate-700 text-sm">Parking available — enter from the ramp.</span></div>
           </div>
         </div>
         <div class="scroll-fade space-y-6" style="animation-delay:.1s;">
@@ -433,7 +431,7 @@
             </div>
             <div><p class="font-semibold text-slate-900 mb-1">📧 Email</p><a id="aw-email-contact2" href="#" class="text-brand-burgundy font-semibold hover:underline"></a></div>
             <div><p class="font-semibold text-slate-900 mb-2">🕐 Business Hours</p><ul class="space-y-1 text-slate-600 text-sm"><li><strong>Mon–Fri:</strong> 9:30 AM – 6:00 PM</li><li><strong>Saturday:</strong> 10:00 AM – 3:00 PM</li><li><strong>Sunday:</strong> Closed</li></ul></div>
-            <div class="info-strip"><span class="text-brand-burgundy font-bold">✓</span><span class="text-slate-700 text-sm">Parking available — enter from rear.</span></div>
+            <div class="info-strip"><span class="text-brand-burgundy font-bold">✓</span><span class="text-slate-700 text-sm">Parking available — enter from the ramp.</span></div>
           </div>
         </div>
         <div class="space-y-6">
@@ -499,7 +497,10 @@
   function showPage(p){var m=document.getElementById('main-site'),c=document.getElementById('contact-page');if(p==='contact'){m.classList.add('hidden-page');c.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});if(history.pushState)history.pushState(null,'','/Contact');}else{m.classList.remove('hidden-page');c.classList.remove('active');if(history.pushState)history.pushState(null,'','/');}}
   (function(){var p=window.location.pathname;if(p.toLowerCase()==='/contact'||p.toLowerCase()==='/contact/')showPage('contact');})();
   document.getElementById('footerYear').textContent=new Date().getFullYear();
-  (function(){var u='allwheelstt',d='gmail.com',e=u+'@'+d;['aw-email-contact','aw-email-footer','aw-email-contact2'].forEach(function(id){var el=document.getElementById(id);if(el){el.href='mailto:'+e;el.textContent=(el.textContent||'')+e;}});})();
+  (function(){
+    var u='info', d='allwheelstt.com', e=u+'@'+d;
+    ['aw-email-contact','aw-email-footer','aw-email-contact2'].forEach(function(id){var el=document.getElementById(id);if(el){el.href='mailto:'+e;el.textContent=(el.textContent||'')+e;}});
+  })();
   function openChat(){document.getElementById('aw-chat-overlay').classList.remove('aw-chat-hidden');document.getElementById('aw-chat-modal').classList.remove('aw-chat-hidden');}
   function closeChat(){document.getElementById('aw-chat-overlay').classList.add('aw-chat-hidden');document.getElementById('aw-chat-modal').classList.add('aw-chat-hidden');}
   var WH='https://paymegpt.com/api/webhooks/flow/2167/9ce6097526e5084217f91d7803b3fb777ad9c7eb7955399938c35fffe6afe461';
