@@ -4,7 +4,6 @@ body{font-family:'DM Sans',sans-serif;background-color:#0A1A2D;}
     .section-spacing{padding-left:1rem;padding-right:1rem;}
     @media(min-width:768px){.section-spacing{padding-left:1.5rem;padding-right:1.5rem;}}
     @media(min-width:1024px){.section-spacing{padding-left:3rem;padding-right:3rem;}}
-    .sticky-cta{position:sticky;top:0;z-index:45;}
     .btn-primary{background:#8C1F28;color:#fff;font-weight:600;border-radius:10px;padding:14px 28px;transition:all .2s;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;border:none;cursor:pointer;}
     .btn-primary:hover{background:#6b1620;transform:scale(1.02);}
     .btn-secondary-outline{background:transparent;border:2px solid #fff;color:#fff;font-weight:600;border-radius:10px;padding:12px 24px;transition:all .2s;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;cursor:pointer;}
