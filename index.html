@@ -218,9 +218,8 @@
 </head>
 <body class="antialiased bg-white text-slate-800 font-body">
 
-<!-- ✅ FIXED: Single sticky wrapper so both bars stick together on scroll -->
 <div class="sticky top-0 z-50">
-  <div class="bg-brand-navy text-white">
+  <div class="bg-brand-navy text-white" data-section="topbar">
     <div class="mx-auto max-w-7xl px-4 py-2.5 flex flex-col sm:flex-row items-center justify-between gap-2">
       <div class="text-sm font-medium">⚡ Fast 10-Minute Service &bull; Walk-ins Welcome &bull; MVA Authorized</div>
       <div class="flex items-center gap-3">
@@ -229,14 +228,14 @@
       </div>
     </div>
   </div>
-  <header class="bg-gradient-to-b from-[#1F4ED8] via-[#1E40AF] to-[#1E3A8A] border-b border-black/20 shadow-lg">
+  <header data-section="header" class="bg-gradient-to-b from-[#1F4ED8] via-[#1E40AF] to-[#1E3A8A] border-b border-black/20 shadow-lg">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-1.5 flex items-center justify-between text-white">
-      <a href="#" onclick="showPage('home');return false;"><img src="https://tramsinsurance.com/wp-content/uploads/2025/11/All-wheels-logo.White_.png" alt="All Wheels Tag &amp; Title Logo" class="logo-header"></a>
-      <nav class="hidden md:flex items-center gap-7 text-white/90 text-sm font-medium">
+      <a href="/" onclick="showPage('home');return false;"><img src="https://tramsinsurance.com/wp-content/uploads/2025/11/All-wheels-logo.White_.png" alt="All Wheels Tag &amp; Title Logo" class="logo-header"></a>
+      <nav data-section="navbar" class="hidden md:flex items-center gap-7 text-white/90 text-sm font-medium">
         <a href="#services" onclick="showPage('home');setTimeout(()=>document.getElementById('services').scrollIntoView({behavior:'smooth'}),50);return false;" class="hover:text-white transition">Services</a>
         <a href="#get-started" onclick="showPage('home');setTimeout(()=>document.getElementById('get-started').scrollIntoView({behavior:'smooth'}),50);return false;" class="hover:text-white transition">Get Started</a>
         <a href="#faq" onclick="showPage('home');setTimeout(()=>document.getElementById('faq').scrollIntoView({behavior:'smooth'}),50);return false;" class="hover:text-white transition">FAQ</a>
-        <a href="#" onclick="showPage('contact');return false;" class="hover:text-white transition font-semibold text-white">Contact</a>
+        <a href="#contact-info" onclick="showPage('home');setTimeout(()=>document.getElementById('contact-info').scrollIntoView({behavior:'smooth'}),50);return false;" class="hover:text-white transition font-semibold text-white">Contact</a>
       </nav>
       <div class="flex items-center gap-3">
         <a href="#notary" onclick="showPage('home');setTimeout(()=>document.getElementById('notary').scrollIntoView({behavior:'smooth'}),50);return false;" class="hidden md:inline-flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm text-white bg-slate-800 hover:bg-slate-900 shadow-sm transition font-semibold">✒️ Notary</a>
@@ -247,20 +246,20 @@
   </header>
 </div>
 
-<div id="mobileMenuOverlay" class="fixed inset-0 bg-brand-navy/95 z-50 flex flex-col justify-center items-center hidden">
+<div id="mobileMenuOverlay" data-section="mobile-menu" class="fixed inset-0 bg-brand-navy/95 z-50 flex flex-col justify-center items-center hidden">
   <button id="closeMenuBtn" class="absolute top-6 right-6 text-white text-3xl">✕</button>
   <nav class="flex flex-col items-center gap-6 text-center w-full px-6">
     <a href="#services" onclick="overlay.classList.add('hidden');showPage('home');setTimeout(()=>document.getElementById('services').scrollIntoView({behavior:'smooth'}),50);return false;" class="text-white text-2xl font-semibold">Services</a>
     <a href="#get-started" onclick="overlay.classList.add('hidden');showPage('home');setTimeout(()=>document.getElementById('get-started').scrollIntoView({behavior:'smooth'}),50);return false;" class="text-white text-2xl font-semibold">Get Started</a>
     <a href="#faq" onclick="overlay.classList.add('hidden');showPage('home');setTimeout(()=>document.getElementById('faq').scrollIntoView({behavior:'smooth'}),50);return false;" class="text-white text-2xl font-semibold">FAQ</a>
-    <a href="#" onclick="overlay.classList.add('hidden');showPage('contact');return false;" class="text-white text-2xl font-semibold">Contact</a>
+    <a href="#contact-info" onclick="overlay.classList.add('hidden');showPage('home');setTimeout(()=>document.getElementById('contact-info').scrollIntoView({behavior:'smooth'}),50);return false;" class="text-white text-2xl font-semibold">Contact</a>
     <a href="https://tramsinsurance.com/" target="_blank" class="text-brand-gold text-2xl font-semibold">🛡️ Auto Insurance</a>
     <button id="mobileMenuChatBtn" class="text-white text-2xl font-semibold">💬 Chat Support</button>
     <a href="tel:+12406698558" class="mt-4 btn-primary text-lg !px-8 !py-3">📞 Call (240) 669-8558</a>
   </nav>
 </div>
 <div id="main-site" class="main-site">
-  <section id="hero-section" class="hero-gradient text-white relative overflow-hidden" style="min-height:600px;">
+  <section id="hero-section" data-section="hero" class="hero-gradient text-white relative overflow-hidden" style="min-height:600px;">
     <div class="absolute inset-0 opacity-10"><div class="absolute top-10 right-10 w-40 h-40 bg-brand-burgundy rounded-full blur-3xl"></div><div class="absolute bottom-10 left-10 w-40 h-40 bg-brand-burgundy rounded-full blur-3xl"></div></div>
     <div class="relative mx-auto max-w-7xl section-spacing py-16 sm:py-20 lg:py-24">
       <div class="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-20 items-center">
@@ -274,7 +273,7 @@
           <p class="max-w-lg text-slate-300 text-lg mb-9 leading-relaxed">Full-service vehicle registration, tags, and title transfers — done fast, without the headache. No appointment needed.</p>
           <div class="flex flex-col lg:flex-row items-stretch lg:items-center gap-4 mb-7">
             <a href="tel:+12406698558" class="btn-primary text-lg justify-center text-center" style="white-space:nowrap;">📞 Call Now — (240) 669-8558</a>
-            <a href="#" onclick="showPage('contact');return false;" class="btn-secondary-outline justify-center" style="white-space:nowrap;">✉️ Contact Us Online</a>
+            <a href="#contact-info" onclick="setTimeout(()=>document.getElementById('contact-info').scrollIntoView({behavior:'smooth'}),50);return false;" class="btn-secondary-outline justify-center" style="white-space:nowrap;">✉️ Contact Us Online</a>
           </div>
           <div class="inline-flex items-center gap-2 flex-wrap bg-gradient-to-r from-amber-50 via-yellow-50 to-amber-50 border border-amber-300 rounded-xl px-5 py-3 shadow-md">
             <p class="text-brand-navy font-medium text-sm sm:text-base">🏷️ Mention this page for <span class="inline-block bg-brand-burgundy text-white font-extrabold text-lg sm:text-xl px-3 py-0.5 rounded-full mx-1 shadow-sm">$5 OFF</span> Registration Renewal</p>
@@ -287,7 +286,7 @@
       </div>
     </div>
   </section>
-  <section class="bg-white border-b border-slate-200 py-4 overflow-x-auto">
+  <section data-section="trust-strip" class="bg-white border-b border-slate-200 py-4 overflow-x-auto">
     <div class="mx-auto max-w-7xl px-4 flex items-center justify-center gap-6 sm:gap-10 flex-nowrap min-w-max sm:min-w-0 sm:flex-wrap">
       <div class="trust-item text-brand-navy">✅ MVA Authorized Agency</div>
       <div class="trust-item text-brand-navy">⭐ 4.1 Stars on Google (15 Reviews)</div>
@@ -296,7 +295,7 @@
       <div class="trust-item text-brand-navy">📅 Serving Gaithersburg Since 2013</div>
     </div>
   </section>
-  <section class="py-8 bg-slate-50">
+  <section data-section="badge-and-intro" class="py-8 bg-slate-50">
     <div class="mx-auto max-w-5xl px-4 flex flex-col md:flex-row items-center justify-center gap-8">
       <div class="bg-white rounded-2xl shadow-md border-2 border-slate-200 px-10 py-6 text-center">
         <p style="font-family:'Poppins',sans-serif;font-weight:800;font-size:2rem;color:#0000CC;line-height:1.1;margin:0;">MVA</p>
@@ -307,7 +306,7 @@
       <p class="text-lg md:text-xl text-slate-700 max-w-xl leading-relaxed text-center md:text-left">At <strong>All Wheels Tag &amp; Title Services</strong>, we keep you on the road by handling the paperwork quickly and correctly — so you can focus on the journey ahead.</p>
     </div>
   </section>
-  <section id="services" class="py-14 sm:py-20 bg-white">
+  <section id="services" data-section="services" class="py-14 sm:py-20 bg-white">
     <div class="mx-auto max-w-7xl section-spacing">
       <div class="text-center mb-12 scroll-fade"><h2 class="text-3xl sm:text-4xl font-poppins font-bold text-brand-navy mb-3">Our Tag &amp; Title Services</h2><p class="text-lg text-slate-600 max-w-2xl mx-auto">Most services completed in minutes — skip the MVA lines.</p></div>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -323,7 +322,7 @@
       </div>
     </div>
   </section>
-  <section id="get-started" class="py-14 sm:py-20 bg-slate-50">
+  <section id="get-started" data-section="get-started" class="py-14 sm:py-20 bg-slate-50">
     <div class="mx-auto max-w-3xl section-spacing">
       <div class="scroll-fade bg-white rounded-2xl shadow-lg border border-slate-200 p-8 sm:p-10">
         <div class="text-center mb-8"><h2 class="text-2xl sm:text-3xl font-poppins font-bold text-brand-navy mb-3">Start Your Tag &amp; Title — We'll Call You Back Fast</h2><p class="text-slate-600">Fill out this quick form and we'll reach out during business hours.</p></div>
@@ -343,10 +342,10 @@
       </div>
     </div>
   </section>
-  <section class="py-14 sm:py-20 bg-brand-navy text-white">
+  <section data-section="vehicle-showcase" class="py-14 sm:py-20 bg-brand-navy text-white">
     <div class="mx-auto max-w-7xl section-spacing text-center"><h2 class="text-3xl sm:text-4xl font-poppins font-bold mb-3 scroll-fade">Our All Wheels Service Vehicle</h2><p class="text-slate-300 text-lg mb-8 scroll-fade">On the road helping drivers across Gaithersburg and Montgomery County.</p><div class="flex justify-center scroll-fade"><img src="https://tramsinsurance.com/wp-content/uploads/2025/11/car.png" alt="All Wheels Service Vehicle" class="animate-car" style="width:420px;max-width:90%;" loading="lazy"></div></div>
   </section>
-  <section class="py-14 sm:py-20 bg-white">
+  <section data-section="benefits" class="py-14 sm:py-20 bg-white">
     <div class="mx-auto max-w-7xl section-spacing"><h2 class="text-3xl sm:text-4xl font-poppins font-bold text-brand-navy mb-10 text-center scroll-fade">Why Choose All Wheels?</h2>
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
       <div class="scroll-fade text-center p-6"><div class="text-4xl mb-3">⚡</div><h3 class="font-poppins font-bold text-brand-navy mb-1">Fast &amp; Friendly</h3><p class="text-slate-600 text-sm">In and out in minutes — we prioritize your time.</p></div>
@@ -355,7 +354,7 @@
       <div class="scroll-fade text-center p-6" style="animation-delay:.3s;"><div class="text-4xl mb-3">📞</div><h3 class="font-poppins font-bold text-brand-navy mb-1">AI Receptionist</h3><p class="text-slate-600 text-sm">Missed us? Our AI answers 24/7 — never miss a call.</p></div>
     </div></div>
   </section>
-  <section class="py-6 bg-white">
+  <section data-section="video-promo" class="py-6 bg-white">
     <div class="mx-auto px-4 mb-8" style="max-width:900px;">
       <div class="relative rounded-3xl overflow-hidden shadow-xl" style="min-height:420px;">
         <video autoplay loop muted playsinline preload="none" class="absolute inset-0 w-full h-full object-cover object-top z-0"><source src="https://tramsinsurance.com/wp-content/uploads/2025/11/smooth-waiting-in-line-2.mp4" type="video/mp4" /></video>
@@ -364,7 +363,7 @@
       </div>
     </div>
   </section>
-  <section class="py-14 sm:py-20 bg-slate-50">
+  <section data-section="testimonials" class="py-14 sm:py-20 bg-slate-50">
     <div class="mx-auto max-w-7xl section-spacing">
       <div class="text-center mb-10 scroll-fade"><h2 class="text-3xl sm:text-4xl font-poppins font-bold text-brand-navy mb-3">Love Our Service? Tell Google!</h2><p class="text-lg text-slate-600">Real reviews from Gaithersburg drivers.</p></div>
       <div class="grid md:grid-cols-3 gap-6 mb-10">
@@ -379,7 +378,7 @@
       <p class="text-sm text-slate-500 mt-3 text-center">Takes 60 seconds — helps us serve more Gaithersburg drivers!</p>
     </div>
   </section>
-  <section id="faq" class="py-14 sm:py-20 bg-white">
+  <section id="faq" data-section="faq" class="py-14 sm:py-20 bg-white">
     <div class="mx-auto max-w-4xl section-spacing">
       <div class="text-center mb-10 scroll-fade"><h2 class="text-3xl sm:text-4xl font-poppins font-bold text-brand-navy mb-3">Frequently Asked Questions</h2><p class="text-lg text-slate-600 mb-5">Quick answers to common questions.</p><input type="text" id="faqSearch" placeholder="Search FAQ..." class="form-input max-w-md mx-auto" /></div>
       <div class="space-y-3">
@@ -390,7 +389,7 @@
       </div>
     </div>
   </section>
-  <section class="py-14 sm:py-20 bg-slate-50">
+  <section id="contact-info" data-section="contact-info" class="py-14 sm:py-20 bg-slate-50">
     <div class="mx-auto max-w-7xl section-spacing">
       <div class="text-center mb-10 scroll-fade"><h2 class="text-3xl sm:text-4xl font-poppins font-bold text-brand-navy mb-3">Visit Our Gaithersburg Office</h2><p class="text-lg text-slate-600">Walk in anytime during business hours.</p></div>
       <div class="grid md:grid-cols-2 gap-8">
@@ -406,15 +405,15 @@
         </div>
         <div class="scroll-fade space-y-6" style="animation-delay:.1s;">
           <img src="https://tramsinsurance.com/wp-content/uploads/2025/12/Office-AllWheels.png" alt="All Wheels Office" class="w-full h-60 object-cover rounded-2xl shadow-md" loading="lazy" />
-          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm text-center"><p class="text-slate-600 mb-4 font-medium">Have a question or need to request a service?</p><a href="#" onclick="showPage('contact');return false;" class="btn-primary w-full justify-center">✉️ Go to Contact Page →</a></div>
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm text-center"><p class="text-slate-600 mb-4 font-medium">Have a question or need to request a service?</p><a href="#get-started" onclick="setTimeout(()=>document.getElementById('get-started').scrollIntoView({behavior:'smooth'}),50);return false;" class="btn-primary w-full justify-center">📨 Send Us a Message →</a></div>
         </div>
       </div>
       <div class="mt-10 scroll-fade rounded-2xl overflow-hidden border border-slate-200 shadow-sm"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3097.5!2d-77.2017!3d39.1389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7cd0df658874d%3A0xdbb5e4e7a30905af!2s201%20N%20Frederick%20Ave%2C%20Gaithersburg%2C%20MD%2020877!5e0!3m2!1sen!2sus!4v1700000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full" style="height:350px;border:none;"></iframe></div>
     </div>
   </section>
 </div>
-<div id="contact-page" class="contact-page">
-  <section class="py-12 bg-white">
+<div id="contact-page" data-section="contact-page" class="contact-page">
+  <section id="contact-section" class="py-12 bg-white">
     <div class="mx-auto max-w-5xl section-spacing">
       <div class="grid md:grid-cols-2 gap-8 items-start">
         <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
@@ -462,7 +461,7 @@
     </div>
   </section>
 </div>
-<footer class="bg-brand-navy text-white py-10 pb-24">
+<footer data-section="footer" class="bg-brand-navy text-white py-10 pb-24">
   <div class="mx-auto max-w-7xl section-spacing">
     <div class="grid md:grid-cols-3 gap-8 mb-8">
       <div><img src="https://tramsinsurance.com/wp-content/uploads/2025/11/All-wheels-logo.White_.png" alt="All Wheels Tag &amp; Title Logo" class="logo-footer mb-4"><p class="text-sm text-slate-300 mb-4">MVA-authorized tag, title, registration, and notary services in Gaithersburg, MD. Walk-ins welcome.</p>
@@ -475,7 +474,7 @@
         <li><a href="#services" onclick="showPage('home');setTimeout(()=>document.getElementById('services').scrollIntoView({behavior:'smooth'}),50);return false;" class="text-slate-300 hover:text-white transition">Services</a></li>
         <li><a href="#get-started" onclick="showPage('home');setTimeout(()=>document.getElementById('get-started').scrollIntoView({behavior:'smooth'}),50);return false;" class="text-slate-300 hover:text-white transition">Get Started</a></li>
         <li><a href="#faq" onclick="showPage('home');setTimeout(()=>document.getElementById('faq').scrollIntoView({behavior:'smooth'}),50);return false;" class="text-slate-300 hover:text-white transition">FAQ</a></li>
-        <li><a href="#" onclick="showPage('contact');return false;" class="text-slate-300 hover:text-white transition">Contact</a></li>
+        <li><a href="#contact-info" onclick="showPage('home');setTimeout(()=>document.getElementById('contact-info').scrollIntoView({behavior:'smooth'}),50);return false;" class="text-slate-300 hover:text-white transition">Contact</a></li>
         <li><a href="https://search.google.com/local/writereview?placeid=ChIJ14dc9g3Nt4kRTwUJo-e0hds" target="_blank" rel="noopener" class="text-brand-gold hover:text-yellow-300 transition font-semibold">⭐ Review Us on Google</a></li>
         <li><a href="https://www.yelp.com/biz/all-wheels-tag-and-title-gaithersburg-2" target="_blank" rel="noopener" class="text-red-400 hover:text-red-300 transition font-semibold">⭐ Review Us on Yelp</a></li>
       </ul></div>
